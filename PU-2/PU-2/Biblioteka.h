@@ -4,7 +4,10 @@
 #include <memory>
 
 #include "Baza_uzytkownikow.h"
+#include "Rezerwacje.h"
+#include "Ksiazki.h"
 #include "Gosc.h"
+#include "Pracownik.h"
 
 enum class status
 {
@@ -25,12 +28,17 @@ public:
 
 private:
 	status m_status;
-	bool m_loop;
+	bool m_petla;
+	int m_uid;
 
 	Baza_uzytkownikow m_baza_uzytkownikow;
+	Lista_ksiazek m_lista_ksiazek;
+	Lista_rezerwacji m_lista_rezerwacji;
+
 	std::unique_ptr<Uzytkownicy> m_uzytkownik;
 
 	void zamknij();
+	void loguj_pracownik(int id);
 
 
 };

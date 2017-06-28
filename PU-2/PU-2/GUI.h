@@ -9,9 +9,13 @@ class GUI
 {
 public:
 	GUI(std::function<void(void)> zamknij);
+	~GUI();
 	void start();
 	void czysc_gui();
 	void dodaj_guzik(std::string tresc, std::function<void(void)> akcja);
+	void dodaj_tekst(std::string tresc);
+	tgui::EditBox::Ptr dodaj_editbox(std::string tresc, bool ukryj, bool id);
+	tgui::ListBox::Ptr dodaj_listbox();
 	void koniec();
 
 

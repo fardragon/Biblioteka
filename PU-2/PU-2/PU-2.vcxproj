@@ -148,7 +148,10 @@
     <ClCompile Include="Biblioteka.cpp" />
     <ClCompile Include="Gosc.cpp" />
     <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="Ksiazki.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pracownik.cpp" />
+    <ClCompile Include="Rezerwacje.cpp" />
     <ClCompile Include="Uzytkownicy.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +159,9 @@
     <ClInclude Include="Biblioteka.h" />
     <ClInclude Include="Gosc.h" />
     <ClInclude Include="GUI.h" />
+    <ClInclude Include="Ksiazki.h" />
+    <ClInclude Include="Pracownik.h" />
+    <ClInclude Include="Rezerwacje.h" />
     <ClInclude Include="Uzytkownicy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

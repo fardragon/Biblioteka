@@ -27,9 +27,6 @@
     <ClCompile Include="Baza_uzytkownikow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Uzytkownicy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Gosc.cpp">
       <Filter>Source Files\Uzytkownicy</Filter>
     </ClCompile>
@@ -37,6 +34,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pracownik.cpp">
+      <Filter>Source Files\Uzytkownicy</Filter>
+    </ClCompile>
+    <ClCompile Include="Uzytkownicy.cpp">
+      <Filter>Source Files\Uzytkownicy</Filter>
+    </ClCompile>
+    <ClCompile Include="Rezerwacje.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ksiazki.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,14 +56,23 @@
     <ClInclude Include="Baza_uzytkownikow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Uzytkownicy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Gosc.h">
       <Filter>Header Files\Uzytkownicy</Filter>
+    </ClInclude>
+    <ClInclude Include="Pracownik.h">
+      <Filter>Header Files\Uzytkownicy</Filter>
+    </ClInclude>
+    <ClInclude Include="Rezerwacje.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Uzytkownicy.h">
+      <Filter>Header Files\Uzytkownicy</Filter>
+    </ClInclude>
+    <ClInclude Include="Ksiazki.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
