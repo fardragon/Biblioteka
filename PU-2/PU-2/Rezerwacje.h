@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <algorithm>
 
 class Rezerwacja
 {
@@ -13,6 +14,7 @@ public:
 	int pobierz_id_egzemplarza() const { return m_id_egzemplarza; };
 	int pobierz_id_uzytkownika() const { return m_id_uzytkownika; };
 
+	/*
 	bool operator == (const Rezerwacja& other)
 	{
 		if ((other.pobierz_id_uzytkownika() == m_id_uzytkownika) && (other.pobierz_ISBN_ksiazki() == m_ISBN) && (other.pobierz_id_egzemplarza() == m_id_egzemplarza))
@@ -21,7 +23,7 @@ public:
 		}
 		return false;
 	}
-
+	*/
 private:
 
 	std::string m_ISBN;
@@ -36,8 +38,8 @@ public:
 
 	Lista_rezerwacji();
 
-	void dodaj_rezerwacje(int id_uzytkownika, const std::string& ISBN_ksiazki, int id_egzemplarza);
-	bool usun_rezerwacje(int id_uzytkownika, const std::string& ISBN_ksiazki, int id_egzemplarza);
+	bool dodaj_rezerwacje(int id_uzytkownika, const std::string& ISBN_ksiazki, int id_egzemplarza);
+	bool usun_rezerwacje(const std::string& ISBN_ksiazki, int id_egzemplarza);
 	std::vector<Rezerwacja> szukaj_rezerwacji(int id_uzytkownika);
 
 private:

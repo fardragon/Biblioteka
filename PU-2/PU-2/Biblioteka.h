@@ -5,6 +5,7 @@
 
 #include "Baza_uzytkownikow.h"
 #include "Rezerwacje.h"
+#include "Wypozyczenia.h"
 #include "Ksiazki.h"
 #include "Gosc.h"
 #include "Pracownik.h"
@@ -34,6 +35,7 @@ private:
 	Baza_uzytkownikow m_baza_uzytkownikow;
 	Lista_ksiazek m_lista_ksiazek;
 	Lista_rezerwacji m_lista_rezerwacji;
+	Lista_wypozyczen m_lista_wypozyczen;
 
 	std::unique_ptr<Uzytkownicy> m_uzytkownik;
 

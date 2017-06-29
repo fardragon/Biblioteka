@@ -1,8 +1,11 @@
 #ifndef Pracownik_h__
 #define Pracownik_h__
 
+#include <sstream>
+
 #include "Uzytkownicy.h"
 #include "Rezerwacje.h"
+#include "Wypozyczenia.h"
 
 enum class listbox_status
 {
@@ -15,12 +18,13 @@ class Pracownik : public Uzytkownicy
 {
 
 public:
-	Pracownik(Baza_uzytkownikow* baza_uzytkownikow, std::function<void(void)> zamknij, int id, Lista_rezerwacji* zamowienia);
+	Pracownik(Baza_uzytkownikow* baza_uzytkownikow, std::function<void(void)> zamknij, int id, Lista_rezerwacji* zamowienia, Lista_wypozyczen* wypozyczenia);
 
 
 private:
 
 	Lista_rezerwacji* m_zamowienia;
+	Lista_wypozyczen* m_wypozyczenia;
 
 	virtual void start() override;
 

@@ -19,7 +19,7 @@ void Biblioteka::start()
 				break;
 			case status::loguj_pracownik:
 				m_uzytkownik.reset(nullptr);
-				m_uzytkownik = std::make_unique<Pracownik>(&m_baza_uzytkownikow, std::bind(&Biblioteka::zamknij, this), m_uid,&m_lista_rezerwacji);
+				m_uzytkownik = std::make_unique<Pracownik>(&m_baza_uzytkownikow, std::bind(&Biblioteka::zamknij, this), m_uid,&m_lista_rezerwacji, &m_lista_wypozyczen);
 				break;
 			case status::loguj_administrator:
 				break;

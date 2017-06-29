@@ -9,7 +9,7 @@ Lista_ksiazek::Lista_ksiazek()
 
 	this->dodaj_ksiazke("ISBN2", "TYTUL2", "AUTOR2");
 	this->dodaj_egzemplarz("ISBN2", 1, 1, "Wyd2");
-	this->dodaj_egzemplarz("ISBN2", 2, 2, "Wyd3");
+	this->dodaj_egzemplarz("ISBN2", 15, 2, "Wyd3");
 }
 
 bool Lista_ksiazek::dodaj_ksiazke(const std::string& ISBN, const std::string& tytul, const std::string& autor)

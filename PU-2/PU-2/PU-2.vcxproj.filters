@@ -48,6 +48,9 @@
     <ClCompile Include="Ksiazki.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Wypozyczenia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Biblioteka.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files\Uzytkownicy</Filter>
     </ClInclude>
     <ClInclude Include="Ksiazki.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wypozyczenia.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

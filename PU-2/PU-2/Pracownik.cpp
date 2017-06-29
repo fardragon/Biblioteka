@@ -1,7 +1,7 @@
 #include "Pracownik.h"
 
-Pracownik::Pracownik(Baza_uzytkownikow * baza_uzytkownikow, std::function<void(void)> zamknij, int id, Lista_rezerwacji* zamowienia) :
-	Uzytkownicy(id, baza_uzytkownikow, zamknij), m_zamowienia(zamowienia)
+Pracownik::Pracownik(Baza_uzytkownikow * baza_uzytkownikow, std::function<void(void)> zamknij, int id, Lista_rezerwacji* zamowienia, Lista_wypozyczen* wypozyczenia) :
+	Uzytkownicy(id, baza_uzytkownikow, zamknij), m_zamowienia(zamowienia), m_wypozyczenia(wypozyczenia)
 {
 	this->menu_glowne();
 }
@@ -153,7 +153,7 @@ void Pracownik::pobierz_zamowienia()
 
 		for (auto &it : zamowienia)
 		{
-			std::string linia = it.pobierz_ISBN_ksiazki();
+			std::string linia = it.pobierz_ISBN_ksiazki() + " " + std::to_string(it.pobierz_id_egzemplarza()) + " " + std::to_string(uid);
 			if (auto spt = m_listbox.lock())
 			{
 				spt->addItem(linia);
@@ -168,6 +168,19 @@ void Pracownik::pobierz_zamowienia()
 
 void Pracownik::potwierdz_odbior(const std::string & zamowienie)
 {
+	std::istringstream temp_stream(zamowienie);
+	std::string temp, ISBN;
 
+	temp_stream >> ISBN;
+	temp_stream >> temp;
+
+	int id_egzemplarza = stoi(temp);
+	
+	temp_stream >> temp;
+
+	int id_uzytkownika = stoi(temp);
+
+	m_zamowienia->usun_rezerwacje( ISBN,id_egzemplarza);
+	m_wypozyczenia->dodaj_wypozyczenie(id_uzytkownika, ISBN, id_egzemplarza);
 
 }

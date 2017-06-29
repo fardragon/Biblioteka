@@ -153,6 +153,7 @@
     <ClCompile Include="Pracownik.cpp" />
     <ClCompile Include="Rezerwacje.cpp" />
     <ClCompile Include="Uzytkownicy.cpp" />
+    <ClCompile Include="Wypozyczenia.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Baza_uzytkownikow.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="Pracownik.h" />
     <ClInclude Include="Rezerwacje.h" />
     <ClInclude Include="Uzytkownicy.h" />
+    <ClInclude Include="Wypozyczenia.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
