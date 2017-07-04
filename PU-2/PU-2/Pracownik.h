@@ -6,6 +6,7 @@
 #include "Uzytkownicy.h"
 #include "Rezerwacje.h"
 #include "Wypozyczenia.h"
+#include "Ksiazki.h"
 
 enum class listbox_status
 {
@@ -18,13 +19,14 @@ class Pracownik : public Uzytkownicy
 {
 
 public:
-	Pracownik(Baza_uzytkownikow* baza_uzytkownikow, std::function<void(void)> zamknij, int id, Lista_rezerwacji* zamowienia, Lista_wypozyczen* wypozyczenia);
+	Pracownik(Baza_uzytkownikow* baza_uzytkownikow, std::function<void(void)> zamknij, int id, Lista_rezerwacji* zamowienia, Lista_wypozyczen* wypozyczenia, Lista_ksiazek* ksiazki);
 
 
 private:
 
 	Lista_rezerwacji* m_zamowienia;
 	Lista_wypozyczen* m_wypozyczenia;
+	Lista_ksiazek* m_ksiazki;
 
 	virtual void start() override;
 

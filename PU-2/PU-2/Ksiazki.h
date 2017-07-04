@@ -32,6 +32,7 @@ public:
 	Ksiazka(const std::string& ISBN, const std::string& tytul, const std::string& autor) : m_ISBN(ISBN), m_tytul(tytul), m_autor(autor) {};
 	bool dodaj_egzemplarz(int id, int numer_wydania, const std::string& wydawnictwo);
 	std::string pobierz_ISBN() const { return m_ISBN; };
+	std::string pobierz_tytul() const { return m_tytul; };
 
 
 private:
@@ -53,6 +54,7 @@ public:
 	Lista_ksiazek();
 	bool dodaj_ksiazke(const std::string& ISBN, const std::string& tytul, const std::string& autor);
 	bool dodaj_egzemplarz(const std::string& ISBN, int id, int numer_wydania, const std::string& wydawnictwo);
+	std::string znajdz_tytul(const std::string& ISBN);
 
 private:
 

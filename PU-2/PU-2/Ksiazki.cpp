@@ -56,6 +56,21 @@ bool Lista_ksiazek::dodaj_egzemplarz(const std::string & ISBN, int id, int numer
 
 }
 
+std::string Lista_ksiazek::znajdz_tytul(const std::string & ISBN)
+{
+	std::string temp = "error 404";
+
+	for (auto& it : m_lista)
+	{
+		if (it.pobierz_ISBN() == ISBN)
+		{
+			temp = it.pobierz_tytul();
+			break;
+		}
+	}
+	return temp;
+}
+
 bool Ksiazka::dodaj_egzemplarz(int id, int numer_wydania, const std::string & wydawnictwo)
 {
 	std::vector<Egzemplarz>::iterator it;

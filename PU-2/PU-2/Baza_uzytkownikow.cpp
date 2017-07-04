@@ -1,4 +1,4 @@
-#include "Baza_uzytkownikow.h"
+﻿#include "Baza_uzytkownikow.h"
 
 Baza_uzytkownikow::Baza_uzytkownikow()
 {
@@ -45,9 +45,13 @@ std::vector<std::pair<int, Dane_uzytkownika>> Baza_uzytkownikow::znajdz_id_uzytk
 
 bool Baza_uzytkownikow::potwierdz_realizacje(int id_uzytkownika, const std::string & tytul)
 {
-	std::string tytul, adres;
+	std::string adres;
 	adres = m_dane_uzytkownikow[id_uzytkownika].adres;
 	
+	//jakaś implementacja stmp, raczej wychodzi poza zakres projektu
+
+	std::cout << "Potwierdzenie odbioru: " << tytul << " przez uzytkownika o id: " << id_uzytkownika << " na adres: " << adres << std::endl;
+	return true;
 
 }
 

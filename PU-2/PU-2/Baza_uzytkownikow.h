@@ -5,6 +5,7 @@
 #include <vector>
 #include <tuple>
 #include <map>
+#include <iostream>
 
 enum class login
 {
@@ -31,6 +32,7 @@ public:
 	std::pair<login,int> logowanie(const std::string& nazwa, const std::string& haslo);
 	std::vector<std::pair<int,Dane_uzytkownika>> znajdz_id_uzytkownika(const std::string& imie, const std::string& nazwisko);
 	bool potwierdz_realizacje(int id_uzytkownika, const std::string& tytul);
+	
 
 private:
 	std::vector<std::tuple<int,std::string,std::string,login>> m_uzytkownicy;
