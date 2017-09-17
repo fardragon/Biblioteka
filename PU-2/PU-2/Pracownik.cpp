@@ -137,14 +137,21 @@ void Pracownik::pobierz_zamowienia()
 	int uid = 0;
 	if (auto spt = m_uid.lock())
 	{
-		uid = stoi(spt->getText().toAnsiString());
+		try
+		{
+			uid = stoi(spt->getText().toAnsiString());
+		}
+		catch (std::invalid_argument)
+		{
+			uid = 0;
+		}					
 	}
 	auto zamowienia = m_zamowienia->szukaj_rezerwacji(uid);
 	m_gui.czysc_gui();
 	if (zamowienia.empty())
 	{
 		m_gui.dodaj_tekst("Nie znaleziono zamowien");
-		m_gui.dodaj_guzik("Wroc", std::bind(&Pracownik::szukaj_uzytkownika, this));
+		m_gui.dodaj_guzik("Wroc", std::bind(&Pracownik::odbierz_zamowienie, this));
 	}
 	else
 	{
